@@ -1,0 +1,38 @@
+<div>
+    <form #form="ngForm"(ngSubmit)="addUser(form)">
+        <div>
+                <label>Name</label>
+                <br>
+            <input required type="text" [(ngModel)]="NewUser.name" name ="name" >
+            <br>
+            <span *ngIf="form.form.controls['name']?.touched
+            && ! form.form.controls['name']?.valid">required</span><br>
+        </div>
+
+        <div>
+            <label>Age</label>
+            <br>
+            <input type="age" [(ngModel)]="NewUser.age" name ="age" >
+            <br>
+        </div>
+        <div>
+            <label>Email</label>
+            <br>
+            <input required type="email" [(ngModel)]="NewUser.email" name ="email" email >
+            <br>
+            <span *ngIf="form.form.controls['email']?.touched
+            && ! form.form.controls['email']?.valid">required</span><br>
+        
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input required type="password" [(ngModel)]="NewUser.password" name ="password" ><br>
+            <span *ngIf ="form.form.controls['password']?.touched && !form.form.controls['password']?.valid" style="font-size: 11px;color: blue;">required</span>
+          
+            
+        </div>
+        <br>
+        <button type="submit">Add</button>
+            </form>
+            
+        </div>
