@@ -1,4 +1,4 @@
-<div>
+<div class="form">
     <form #form="ngForm"(ngSubmit)="addUser(form)">
         <div>
                 <label>Name</label>
@@ -8,13 +8,20 @@
             <span *ngIf="form.form.controls['name']?.touched
             && ! form.form.controls['name']?.valid">required</span><br>
         </div>
+     <!-- <div>
+        <label>Year</label>
+        <br>
+        <input type="text" [(ngModel)]="NewUser.year" name ="year" >
+        <input type="button" value="Get Age" (click)= "onSubmit()" >
+        <br>
+      </div>-->
 
-        <div>
-            <label>Age</label>
-            <br>
-            <input type="age" [(ngModel)]="NewUser.age" name ="age" >
-            <br>
-        </div>
+      <div>
+      <label > date of birthday  </label>
+      <br>
+      <input type="date" [(ngModel)]="NewUser.dateOfBirthday" name="date of birthday" >
+        <br>
+      </div>
         <div>
             <label>Email</label>
             <br>
@@ -22,17 +29,17 @@
             <br>
             <span *ngIf="form.form.controls['email']?.touched
             && ! form.form.controls['email']?.valid">required</span><br>
-        
+
         </div>
         <div>
             <label>Password</label><br>
             <input required type="password" [(ngModel)]="NewUser.password" name ="password" ><br>
             <span *ngIf ="form.form.controls['password']?.touched && !form.form.controls['password']?.valid" style="font-size: 11px;color: blue;">required</span>
-          
-            
+
+
         </div>
         <br>
         <button type="submit">Add</button>
             </form>
-            
+
         </div>

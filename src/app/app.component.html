@@ -1,247 +1,58 @@
-<app-user (userADD)="UserList.push($event)"></app-user>
-    
-    
 
 
 
+<nav>
+<!--<a routerLink="/form" routerLinkActive="active">Form</a>
+<a routerLink="/table" routerLinkActive="active"><Table></Table></a>-->
+</nav>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<div>
-    <h1>Users Form</h1>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+<div class="head">
+<h1>ROUTING IN ANGULAR</h1>
 
 
 </div>
-<table border="1">
-<thead>
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
-        <th>password</th>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let user of UserList">
-        <td>{{user.name}}</td>
-        <td>{{user.age}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.password}}</td>
-       <td><button (click)="deleteUser(user)">delete</button></td> 
-    </tr> 
-</tbody>
-</table>
 
+    <div class="main">
 
+        <div class="left">
+            <button routerLink="/users/form" >Form</button>
+            <button routerLink="/users/table" >table</button>
 
+        </div>
+        <div class="right">
+            <router-outlet></router-outlet>
 
 
 
+    </div>
+</div>
+    <div class="footer">
+        footer section
+    </div>
+    <script>
 
+        function Add(){
 
+            var list= document.getElementById("List");
+            list.innerHTML+="<li> new line</li>"
 
 
+        }
+        function Remove(){
+            var list= document.getElementById("List");
+            list.innerHTML="";
 
 
+        }
+        </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>

@@ -1,0 +1,30 @@
+<div>
+    <h1>Users Form</h1>
+
+
+</div>
+<div class="table"><table border="1">
+<thead>
+    <tr>
+
+        <th>Name</th>
+        <th>DateOfBirth</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>password</th>
+      <th>#</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let user of service.UserList">
+      <td>{{user.name}}</td>
+      <td> {{user.dateOfBirthday| date }}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+
+       <td><button (click)="deleteUser(user)">delete</button></td>
+    </tr>
+</tbody>
+</table>
+</div>
